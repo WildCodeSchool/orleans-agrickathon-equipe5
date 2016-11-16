@@ -1,0 +1,28 @@
+/* Banniere */
+
+.banniere img {
+    width:100%;
+}
+
+/* Contenus */
+
+a:hover{
+    opacity: 0.75;
+}
+
+.rubrique{
+    margin-top: 50px;
+}
+
+p {
+    margin-top: -300px;
+    margin-left: 201px;
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.footer{
+    margin-top: 300px;
+}
+
