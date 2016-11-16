@@ -16,10 +16,10 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/CV")
+     * @Route("/profile")
      */
     public function cvAction()
     {
-        return $this->render('FrontBundle:Default:cv.html.twig');
+        return $this->render('FrontBundle:Default:profile.html.twig');
     }
 }
