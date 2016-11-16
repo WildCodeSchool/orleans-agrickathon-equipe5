@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Facilitateurs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Contact</th>
+                <th>Description</th>
+                <th>Apport</th>
+                <th>Rse</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for facilitateur in facilitateurs %}
+            <tr>
+                <td><a href="{{ path('facilitateur_show', { 'id': facilitateur.id }) }}">{{ facilitateur.id }}</a></td>
+                <td>{{ facilitateur.nom }}</td>
+                <td>{{ facilitateur.adresse }}</td>
+                <td>{{ facilitateur.contact }}</td>
+                <td>{{ facilitateur.description }}</td>
+                <td>{{ facilitateur.apport }}</td>
+                <td>{{ facilitateur.rse }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('facilitateur_show', { 'id': facilitateur.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('facilitateur_edit', { 'id': facilitateur.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('facilitateur_new') }}">Create a new facilitateur</a>
+        </li>
+    </ul>
+{% endblock %}
