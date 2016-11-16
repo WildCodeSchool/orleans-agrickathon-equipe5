@@ -2,7 +2,7 @@
 
 namespace FrontBundle\Controller;
 
-use FrontBundle\Entity\tag4;
+use FrontBundle\Entity\Tag4;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
@@ -24,7 +24,7 @@ class tag4Controller extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $tag4s = $em->getRepository('FrontBundle:tag4')->findAll();
+        $tag4s = $em->getRepository('FrontBundle:Tag4')->findAll();
 
         return $this->render('tag4/index.html.twig', array(
             'tag4s' => $tag4s,

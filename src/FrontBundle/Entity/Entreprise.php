@@ -49,6 +49,25 @@ class Entreprise
      */
     private $rse;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Tag1", inversedBy="entreprises1")
+     */
+    private $tags1;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Tag2", inversedBy="entreprises2")
+     */
+    private $tags2;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Tag3", inversedBy="entreprises3")
+     */
+    private $tags3;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Tag4", inversedBy="entreprises4")
+     */
+    private $tags4;
 
     /**
      * Get id
@@ -155,5 +174,148 @@ class Entreprise
     {
         return $this->rse;
     }
-}
 
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->tags1 = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add tags1
+     *
+     * @param \FrontBundle\Entity\Tag1 $tags1
+     *
+     * @return Entreprise
+     */
+    public function addTags1(\FrontBundle\Entity\Tag1 $tags1)
+    {
+        $this->tags1[] = $tags1;
+
+        return $this;
+    }
+
+    /**
+     * Remove tags1
+     *
+     * @param \FrontBundle\Entity\Tag1 $tags1
+     */
+    public function removeTags1(\FrontBundle\Entity\Tag1 $tags1)
+    {
+        $this->tags1->removeElement($tags1);
+    }
+
+    /**
+     * Get tags1
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTags1()
+    {
+        return $this->tags1;
+    }
+
+    /**
+     * Add tags2
+     *
+     * @param \FrontBundle\Entity\Tag2 $tags2
+     *
+     * @return Entreprise
+     */
+    public function addTags2(\FrontBundle\Entity\Tag2 $tags2)
+    {
+        $this->tags2[] = $tags2;
+
+        return $this;
+    }
+
+    /**
+     * Remove tags2
+     *
+     * @param \FrontBundle\Entity\Tag2 $tags2
+     */
+    public function removeTags2(\FrontBundle\Entity\Tag2 $tags2)
+    {
+        $this->tags2->removeElement($tags2);
+    }
+
+    /**
+     * Get tags2
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTags2()
+    {
+        return $this->tags2;
+    }
+
+    /**
+     * Add tags3
+     *
+     * @param \FrontBundle\Entity\Tag3 $tags3
+     *
+     * @return Entreprise
+     */
+    public function addTags3(\FrontBundle\Entity\Tag3 $tags3)
+    {
+        $this->tags3[] = $tags3;
+
+        return $this;
+    }
+
+    /**
+     * Remove tags3
+     *
+     * @param \FrontBundle\Entity\Tag3 $tags3
+     */
+    public function removeTags3(\FrontBundle\Entity\Tag3 $tags3)
+    {
+        $this->tags3->removeElement($tags3);
+    }
+
+    /**
+     * Get tags3
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTags3()
+    {
+        return $this->tags3;
+    }
+
+    /**
+     * Add tags4
+     *
+     * @param \FrontBundle\Entity\Tag4 $tags4
+     *
+     * @return Entreprise
+     */
+    public function addTags4(\FrontBundle\Entity\Tag4 $tags4)
+    {
+        $this->tags4[] = $tags4;
+
+        return $this;
+    }
+
+    /**
+     * Remove tags4
+     *
+     * @param \FrontBundle\Entity\Tag4 $tags4
+     */
+    public function removeTags4(\FrontBundle\Entity\Tag4 $tags4)
+    {
+        $this->tags4->removeElement($tags4);
+    }
+
+    /**
+     * Get tags4
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTags4()
+    {
+        return $this->tags4;
+    }
+}

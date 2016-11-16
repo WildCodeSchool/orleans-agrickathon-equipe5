@@ -218,4 +218,3 @@ class Facilitateur
         return $this->rse;
     }
 }
-

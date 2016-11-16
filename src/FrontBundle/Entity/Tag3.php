@@ -27,7 +27,11 @@ class Tag3
      * @ORM\Column(name="tag", type="string", length=255)
      */
     private $tag;
-
+    
+    /**
+     * @ORM\ManyToMany(targetEntity="Entreprise", mappedBy="entreprises")
+     */
+    private $entreprises;
 
     /**
      * Get id
@@ -62,5 +66,45 @@ class Tag3
     {
         return $this->tag;
     }
-}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->entreprises = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
+    /**
+     * Add entreprise
+     *
+     * @param \FrontBundle\Entity\Entreprise $entreprise
+     *
+     * @return Tag3
+     */
+    public function addEntreprise(\FrontBundle\Entity\Entreprise $entreprise)
+    {
+        $this->entreprises[] = $entreprise;
+
+        return $this;
+    }
+
+    /**
+     * Remove entreprise
+     *
+     * @param \FrontBundle\Entity\Entreprise $entreprise
+     */
+    public function removeEntreprise(\FrontBundle\Entity\Entreprise $entreprise)
+    {
+        $this->entreprises->removeElement($entreprise);
+    }
+
+    /**
+     * Get entreprises
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEntreprises()
+    {
+        return $this->entreprises;
+    }
+}
