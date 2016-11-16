@@ -14,4 +14,12 @@ class DefaultController extends Controller
     {
         return $this->render('FrontBundle:Default:index.html.twig');
     }
+
+    /**
+     * @Route("/CV")
+     */
+    public function cvAction()
+    {
+        return $this->render('FrontBundle:Default:cv.html.twig');
+    }
 }
