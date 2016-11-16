@@ -1,18 +1,39 @@
 {% extends 'layout.html.twig' %}
-
+{% block navbar %}{% endblock %}
 {% block content %}
     <div class="container-fluid">
         <div class="row rubrique">
-            <div class="col-lg-offset-1 col-lg-5 tuile">
+            <div class="col-lg-4 tuile">
                 <a href="#">
-                <img src="https://cdn.shopify.com/s/files/1/1137/6324/products/HTB1vBidJpXXXXbqXXXXq6xXFXXXW_grande.jpeg?v=1455588385" alt="paysage_tuile_1">
-                    <p class="tuile">Startup</p>
+                    <div class="hover_1">
+                        <div class="tuiletxt">
+                            <p style="font-size: 30px"><i>____ </i> je suis</p>
+                            <h2 style="font-size: 4vw">Entreprise</h2>
+                        </div>
+                        <img class="img img-responsive" src="{{ asset('assets/images/1.jpg') }}" alt="paysage_tuile_2">
+                    </div>
                 </a>
             </div>
-            <div class="col-lg-5 tuile">
+            <div class="col-lg-4 tuile">
                 <a href="#">
-                <img src="http://121clicks.com/wp-content/uploads/2012/02/pawel_klarecki_07.jpg" alt="paysage_tuile_2">
-                    <p class="tuile">Entreprise</p>
+                    <div class="hover_2">
+                        <div class="tuiletxt">
+                            <p style="font-size: 30px"><i>____ </i> je suis</p>
+                            <h2 style="font-size: 4vw">Startup</h2>
+                        </div>
+                        <img class="img img-responsive" src="{{ asset('assets/images/2.jpg') }}" alt="paysage_tuile_2">
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 tuile">
+                <a href="#">
+                    <div class="hover_3">
+                        <div class="tuiletxt">
+                            <p style="font-size: 30px"><i>____ </i> je suis</p>
+                            <h2 style="font-size: 4vw">Incubateur</br>Facilitateur</h2>
+                        </div>
+                        <img class="img img-responsive" src="{{ asset('assets/images/3.jpg') }}" alt="paysage_tuile_2">
+                    </div>
                 </a>
             </div>
         </div>

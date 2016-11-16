@@ -1,28 +1,212 @@
 /* Banniere */
 
-.banniere img {
-    width:100%;
+.banniere {
+    height: 12vh;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 /* Contenus */
 
-a:hover{
-    opacity: 0.75;
+
+.img:hover {
+    opacity: 0.2;
+    transition: 1s;
+
+}
+
+.img {
+    opacity: 0;
+    width: 100%;
+    transition: 1s;
+}
+
+.hover_1 {
+    background-color: #B8191A;
+}
+
+.hover_2 {
+    background-color: #77CED7;
+}
+
+.hover_3 {
+    background-color: #C9C9C9;
 }
 
 .rubrique{
-    margin-top: 50px;
+    text-align: center;
 }
 
-p {
-    margin-top: -300px;
-    margin-left: 201px;
+.description {
+    text-align: center;
+}
+
+.tuile {
+    padding: 0;
+}
+
+.tuiletxt {
+    z-index: 1;
+    position: absolute;
+    top: 30%;
+    margin-left: 50%;
+    transform: translatex(-50%);
     font-size: 60px;
     color: white;
     text-shadow: 2px 2px 2px black;
 }
 
 .footer{
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
+.adpt_margin{
+    margin-top: -120px;
+}
+
+.container_content {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 30px;
+    padding: 50px;
+}
+
+
+/* CHAT*/
+
+.conversation-wrap
+{
+    padding:0;
+    max-height: 400px;
+    overflow: auto;
+}
+.conversation
+{
+    padding:5px;
+    margin:0;
+
+}
+
+.message-wrap
+{
+
+    padding:0;
+
+}
+.msg
+{
+    padding:5px;
+    /*border-bottom:1px solid #ddd;*/
+    margin:0;
+}
+.msg-wrap
+{
+    padding:10px;
+    max-height: 400px;
+    overflow: auto;
+
+}
+
+.time
+{
+    color:#bfbfbf;
+}
+
+.send-wrap
+{
+    padding:10px;
+    /*background: #f8f8f8;*/
+}
+
+.send-message
+{
+    resize: none;
+}
+
+
+.send-message-btn
+{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    border-bottom-right-radius: 0;
+}
+.btn-panel
+{
+    background: #f7f7f9;
+}
+
+.btn-panel .btn
+{
+    color:white;
+
+    transition: 0.2s all ease-in-out;
+}
+
+.btn-panel .btn:hover
+{
+    color:#666;
+    background: #f8f8f8;
+}
+.btn-panel .btn:active
+{
+    background: #f8f8f8;
+    box-shadow: 0 0 1px #ddd;
+}
+
+.btn-panel-conversation .btn,.btn-panel-msg .btn
+{
+
+    background: #f8f8f8;
+}
+
+.msg-wrap .media-heading
+{
+    color:#003bb3;
+    font-weight: 700;
+}
+
+
+.msg-date
+{
+    background: none;
+    text-align: center;
+    color:#aaa;
+    border:none;
+    box-shadow: none;
+}
+
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    /*        -webkit-border-radius: 10px;
+            border-radius: 10px;*/
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    /*        -webkit-border-radius: 10px;
+            border-radius: 10px;*/
+    background:#ddd;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #ddd;
+}
+
+hr {
+    border-top: 2px solid black;
+}
