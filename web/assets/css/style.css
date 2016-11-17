@@ -1,9 +1,8 @@
 /* Banniere */
 
 .banniere {
-    height: 15vh;
+    height: 5vh;
     text-align: center;
-    margin-bottom: 50px;
 }
 
 li {
@@ -12,12 +11,25 @@ li {
     padding: 0 20px 0 20px;
 }
 
-.navba {
+.logo {
+    margin-bottom: 2.5vh; margin-top: 2.5vh ;height: 90px
+}
+
+.navbarre {
+    position: absolute;
+    top:10vh;
     margin-left: 10vw;
     width: 80vw;
     height: 38px;
     border-top: 1px solid #C9C9C9;
     border-bottom: 1px solid #C9C9C9;
+}
+
+.btn_user {
+    font-size: 20px;
+}
+.user{
+    margin-top: 3.5vh
 }
 /* Contenus */
 
@@ -25,9 +37,7 @@ li {
 .img:hover {
     opacity: 0.2;
     transition: 1s;
-
 }
-
 .img {
     opacity: 0;
     width: 100%;
@@ -46,20 +56,39 @@ li {
     background-color: #C9C9C9;
 }
 
+.header {
+    height: 20vh;
+}
 .rubrique{
+    margin-top:42vh;
     text-align: center;
 }
 
 .description {
     text-align: center;
+    min-height: 45vh;
+    margin-left: 20px;
+}
+
+.player {
+    margin-right: 20px;
+    min-height: 45vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .tuile {
     padding: 0;
+    top: 50%;
+    transform: translatey(-50%);
 }
 
-body {
-    background-image: url("/web/assets/images/Getty.jpg");
+.toto {
+    position: relative;
+    height: 80vh;
+    background-image: url(../images/Getty.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .tuiletxt {
@@ -82,7 +111,7 @@ body {
 }
 
 .container_content {
-    background-image: url("/web/assets/images/Getty.jpg");
+    position: relative;
     padding-top: 50px;
     padding-bottom: 50px;
     border-radius: 30px;
