@@ -1,13 +1,91 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
 
-{% block body %}
-    <h1>Startup edit</h1>
-
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+{% block content %}
+    {% block slogant %}
+    {% endblock %}
+        <div class="container-fluid poop2">
+            {{ form_start(edit_form) }}
+            <div class="formulaire2">
+                <div class="transparent">
+                    <h1 class="text-center">MA STARTUP</h1>
+                    <div class="row">
+                        <div class="col-lg-offset-3 col-lg-6 text-center">
+                            <div>
+                                {{ form_widget(edit_form.nom, {'attr': {'class': 'form-widget2'}}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-3 col-lg-6 text-center">
+                            <div>
+                                {{ form_widget(edit_form.adresse, {'attr': {'class': 'form-widget2'}}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-3 col-lg-6 text-center">
+                            <div>
+                                {{ form_widget(edit_form.contact, {'attr': {'class': 'form-widget2'}}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-3 col-lg-6 text-center">
+                            <div>
+                                {{ form_widget(edit_form.technologie, {'attr': {'class': 'form-widget2'}}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-3 col-lg-6 text-center">
+                            <div>
+                                {{ form_widget(edit_form.rse, {'attr': {'class': 'form-widget2'}}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-3 col-lg-6 text-center">
+                            <div>
+                                {{ form_widget(edit_form.gain, {'attr': {'class': 'form-widget2'}}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-3 col-lg-6 text-center">
+                            <div>
+                                {{ form_widget(edit_form.tags5, {'attr': {'class': 'form-widget2'}}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-3 col-lg-6 text-center">
+                            <div>
+                                {{ form_widget(edit_form.tags6, {'attr': {'class': 'form-widget2'}}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-3 col-lg-6 text-center">
+                            <div>
+                                {{ form_widget(edit_form.tags7, {'attr': {'class': 'form-widget2'}}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-3 col-lg-6 text-center">
+                            <div>
+                                {{ form_widget(edit_form.tags8, {'attr': {'class': 'form-widget2'}}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-3 col-lg-6 text-center row">
+                        <div class="form-button ">
+                            <input class="btn btn-info" type="submit" value="Valider" />
+                        </div>
+                    </div>
+                </div>
+            </div>
     {{ form_end(edit_form) }}
-
     <ul>
         <li>
             <a href="{{ path('startup_index') }}">Back to the list</a>

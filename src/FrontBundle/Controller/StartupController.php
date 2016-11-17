@@ -85,11 +85,12 @@ class StartupController extends Controller
         $editForm = $this->createForm('FrontBundle\Form\StartupType', $startup);
         $editForm->handleRequest($request);
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
+        /*if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('startup_edit', array('id' => $startup->getId()));
-        }
+
+        }*/
+        return $this->redirectToRoute('Front', array('id' => $startup->getId()));
 
         return $this->render('startup/edit.html.twig', array(
             'startup' => $startup,

@@ -51,7 +51,7 @@ class RegistrationController extends BaseController
                 $userManager->updateUser($user);
 
                 if (null === $response = $event->getResponse()) {
-                    $url = $this->generateUrl('startup_new');
+                    $url = $this->generateUrl('startup_edit');
                     $response = new RedirectResponse($url);
                 }
 

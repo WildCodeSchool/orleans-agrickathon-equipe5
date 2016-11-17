@@ -34,6 +34,11 @@ class Tag2
     private $entreprises;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Startup", mappedBy="startups")
+     */
+    private $startups;
+
+    /**
      * Get id
      *
      * @return int
@@ -106,5 +111,39 @@ class Tag2
     public function getEntreprises()
     {
         return $this->entreprises;
+    }
+
+    /**
+     * Add startup
+     *
+     * @param \FrontBundle\Entity\Startup $startup
+     *
+     * @return Tag2
+     */
+    public function addStartup(\FrontBundle\Entity\Startup $startup)
+    {
+        $this->startups[] = $startup;
+
+        return $this;
+    }
+
+    /**
+     * Remove startup
+     *
+     * @param \FrontBundle\Entity\Startup $startup
+     */
+    public function removeStartup(\FrontBundle\Entity\Startup $startup)
+    {
+        $this->startups->removeElement($startup);
+    }
+
+    /**
+     * Get startups
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getStartups()
+    {
+        return $this->startups;
     }
 }

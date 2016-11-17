@@ -50,22 +50,22 @@ class Entreprise
     private $rse;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Tag1", inversedBy="entreprises1")
+     * @ORM\ManyToMany(targetEntity="Tag1", inversedBy="entreprises")
      */
     private $tags1;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Tag2", inversedBy="entreprises2")
+     * @ORM\ManyToMany(targetEntity="Tag2", inversedBy="entreprises")
      */
     private $tags2;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Tag3", inversedBy="entreprises3")
+     * @ORM\ManyToMany(targetEntity="Tag3", inversedBy="entreprises")
      */
     private $tags3;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Tag4", inversedBy="entreprises4")
+     * @ORM\ManyToMany(targetEntity="Tag4", inversedBy="entreprises")
      */
     private $tags4;
 
