@@ -22,4 +22,15 @@ class DefaultController extends Controller
     {
         return $this->render('FrontBundle:Default:profile.html.twig');
     }
+
+
+    /**
+     * @Route("/home")
+     */
+    public function homeAction()
+    {
+        return $this->render('FrontBundle:Default:home.html.twig');
+    }
+
+
 }

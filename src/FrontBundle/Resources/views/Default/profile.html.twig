@@ -2,56 +2,99 @@
 
 {% block stylesheets %}
     {{ parent() }}
+
     <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js" type="text/javascript"></script>
+    <script>
+        function add() {
+            document.getElementsByClassName('chat_s')[0].innerHTML += '<div class="chat_bubble-2">' + document.getElementsByClassName('chat_text')[0].value + '</div>'
+        }
+    </script>
 {% endblock %}
 {% block slogant %}{% endblock %}
 {% block content %}
+    <div id="volet">
+        <div class="chat">
+            <div class="chat_header">
+                <img class="chat_avatar" src="{{ asset('assets/images/photo.jpg') }}">JOHN DOE
+                <div class="chat_status">ONLINE</div>
+            </div>
+            <div class="chat_s">
+                <div class="chat_bubble-2">Bonjour; pouvez-vous me donnez votre ressentiment sur mon innovation ? Vos remarques sont les bienvenues !</div>
+                <div class="chat_bubble-1">Nous sommes fortement intérressé par votre technologie. Néanmoins votre startup manque de maturité. Nous vous conseillons d'intégrer un incubateur.</br><span class="tag_chat">#la-mie-caline</span></div>
+                <div class="chat_bubble-1">UN marché a pourvoir. A poursuivre.</br></br><span class="tag_chat">#Sylvain</span></div>
+                <div class="chat_bubble-1">L'idée est intéressante mais le projet non aboutit.</br></br><span class="tag_chat">#Julien</span></div>
+                <div class="chat_bubble-1">Sur la piste d'un projet novateur.</br></br><span class="tag_chat">#Toto</span></div>
+            </div>
+            <div class="chat_input">
+                <input placeholder="Type here..." class="chat_text" onkeypress="if(event.keyCode === 13){add()}"><button onclick="add()" class="glyphicon glyphicon-send"></button>
+            </div>
+        </div>
+
+        <a href="#volet" class="ouvrir">New &nbsp;<span class="glyphicon glyphicon-comment"></span></a>
+    </div>
     <div class="toto">
         <div class="container">
             <div style="margin-top: 17.5vh; margin-bottom: 17.5vh" class="row">
-                <div class="col-lg-7">
-                    <div class="player"></div>
+                <div class="col-lg-7 col-md-7">
+                    <div class="player"><img class="player_img" src="{{ asset('assets/images/player.png') }}" alt=""></div>
                 </div>
-                <div style="right: 15px" class="col-lg-5">
+                <div style="right: 15px" class="col-lg-5 col-md-5">
                     <div class="row description" style="padding:20px; background-color: rgba(255, 255, 255, 0.95)">
                         <h2 style="color: black">Bon Pain !</h2>
                         <img style=" width: 100px" src="{{ asset('assets/images/etouales.png') }}">
-                        <p style="color: black; margin-bottom: 30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur earum ipsa nobis omnis perferendis quibusdam quod recusandae sapiente, ullam! Accusamus cum neque obcaecati. Aliquid architecto impedit laboriosam nam totam. Fugit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis delectus laboriosam laborum magnam minima nihil, praesentium repudiandae vero? Ad commodi corporis cupiditate distinctio earum labore necessitatibus obcaecati odio quas, tempora.</p>
-                        <a class="btn btn-success">contact</a>
+                        <p style="color: black; margin-bottom: 20px">Du bon pain frais et artisanal à toute heure du jour ou de la nuit grâce à un distributeur automatique simple d’utilisation.</p>
+                        <p><u>Activités :</u></p>
+                            <p>B to B</br>Produits alimentaires</br>Services</br>Autre distribution</p>
+                            <a class="btn btn-success">contact</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12" style="background-color: rgba(0, 0, 0, 0.7); text-align: center">
+        <div class="container container_graph">
+            <div style="padding: 15px" class="col-lg-offset-0 col-lg-4 col-md-offset-0 col-md-4 col-sm-offset-3 col-sm-6 col-xs-offset-3 col-xs-6">
+                <h3 style="color: white">Valeur ajoutée :</h3>
+                <p style="color: white; margin-top: 45px">L’innovation de Bonpain est d’avoir crée un distributeur automatique permettant de fournir du pain aux consommateurs 24h/24 et de couvrir des zones géographiques désertées par les boulangers.</p>
+            </div>
+            <div class="col-lg-offset-0 col-lg-4 col-md-offset-0 col-md-4 col-sm-offset-3 col-sm-6 col-xs-offset-3 col-xs-6">
+                <canvas id="graph"></canvas>
+            </div>
+            <div style="padding: 15px" class="col-lg-offset-0 col-lg-4 col-md-offset-0 col-md-4 col-sm-offset-3 col-sm-6 col-xs-offset-3 col-xs-6">
+                <h3 style="color: white">Responsabilité sociétale :</h3>
+                <p style="color: white; margin-top: 45px">Le distributeur permet aux boulangers de limiter les invendus et donc le gâchis. S’en remettant à son distributeur le boulanger verra son confort de travail amélioré.</p>
             </div>
         </div>
     </div>
     <div class="container container_content">
         <div class="row">
             <div style="margin-top: 30px" class="col-lg-5">
-                <iframe width="100%" height="300px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=1.8881249427795412%2C47.88978743632439%2C1.902287006378174%2C47.89651368501194&amp;layer=mapnik&amp;marker=47.893150669879404%2C1.8952059745788574" style="border: 1px solid black"></iframe>
+                <iframe width="100%" height="300px" frameborder="0" scrolling="no" src="http://www.openstreetmap.org/export/embed.html?bbox=1.8881249427795412%2C47.88978743632439%2C1.902287006378174%2C47.89651368501194&amp;layer=mapnik&amp;marker=47.893150669879404%2C1.8952059745788574"></iframe>
             </div>
 
             <div style="right: 15px; margin-bottom: 50px; margin-top: 50px" class="message-wrap col-lg-offset-2 col-lg-5">
                 <div class="msg-wrap">
                     <div class="media msg">
                         <a class="pull-left" href="#">
-                            <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 32px; height: 32px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
+                            <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 32px; height: 32px;" src="{{ asset('assets/images/photo.jpg') }}">
                         </a>
                         <div class="media-body">
-                            <small style="color: darkslategrey" class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
+                            <small style="color: darkslategrey" class="pull-right time"><i class="fa fa-clock-o"></i>26/10/2016</small>
 
-                            <h5 class="media-heading">Naimish Sakhpara</h5>
-                            <small class="col-lg-10">Arnab Goswami: "Some people close to Congress Party and close to the government had a #secret #meeting in a farmhouse in Maharashtra in which Anna Hazare send some representatives and they had a meeting in the discussed how to go about this all fast and how eventually this will end."</small>
+                            <h5 class="media-heading">#Banette</h5>
+                            <small class="col-lg-10">Forte participation sur les conversations groupées. Je vous recommande d'avoir des échanges avec Bonpain, ils seront constructifs."</small>
                         </div>
                     </div>
                     <div class="media msg">
                         <a class="pull-left" href="#">
-                            <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 32px; height: 32px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
+                            <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 32px; height: 32px;" src="{{ asset('assets/images/photo.jpg') }}">
                         </a>
                         <div class="media-body">
-                            <small style="color: darkslategrey" class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
+                            <small style="color: darkslategrey" class="pull-right time"><i class="fa fa-clock-o"></i>12/07/2016</small>
 
-                            <h5 class="media-heading">Naimish Sakhpara</h5>
-                            <small class="col-lg-10">Arnab Goswami: "Some people close to Congress Party and close to the government had a #secret #meeting in a farmhouse in Maharashtra in which Anna Hazare send some representatives and they had a meeting in the discussed how to go about this all fast and how eventually this will end."</small>
+                            <h5 class="media-heading">#Naimish Sakhpara</h5>
+                            <small class="col-lg-10">Cette startup est très réactive dans ses réponses et porteuse d'une réelle innovation. Nous avons déjà eu l'occasion d'avoir des échanges constructifs."</small>
                         </div>
                     </div>
                 </div>
@@ -63,16 +106,7 @@
 
 
 
-            <div class="col-lg-12" style="background-color: rgba(0, 0, 0, 0.7); text-align: center">
-                <div class="container">
-                    <div style="padding: 15px" class="col-lg-5">
-                        <p style="color: white; margin-top: 45px"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur earum ipsa nobis omnis perferendis quibusdam quod recusandae sapiente, ullam! Accusamus cum neque obcaecati. Aliquid architecto impedit laboriosam nam totam. Fugit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis delectus laboriosam laborum magnam minima nihil, praesentium repudiandae vero? Ad commodi corporis cupiditate distinctio earum labore necessitatibus obcaecati odio quas, tempora.</p>
-                    </div>
-                    <div class="col-lg-offset-3 col-lg-2">
-                        <canvas id="graph"></canvas>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     <script src="{{ asset('assets/js/graph.js') }}" type="text/javascript"></script>

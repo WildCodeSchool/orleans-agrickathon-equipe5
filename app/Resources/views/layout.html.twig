@@ -16,10 +16,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-offset-4 col-lg-4 banniere">
-                        <img class="logo" src="{{ asset('assets/images/logo_hektar.png') }}" alt="">
+                        <a href="home_page.html.twig"><img class="logo" src="{{ asset('assets/images/logo_hektar.png') }}" alt=""></a>
                        {% block slogant %} <p style="margin-bottom: 50px ;font-size: 18px ;font-family: 'Droid Serif', serif;">Ensemble, rapprochons les acteurs de l'agriculture 3.0</p> {% endblock %}
                     </div>
-                    <div class="col-lg-offset-1 col-lg-3">
+                    <div class="col-lg-3">
+                        {% block icon %}
                         <ul class="user">
                             <li>
                                 <a class="btn btn_user"><span class="glyphicon glyphicon-bell"></span></a>
@@ -31,6 +32,7 @@
                                 <a class="btn btn_user"><span class="glyphicon glyphicon-user"></span></a>
                             </li>
                         </ul>
+                        {% endblock %}
                     </div>
                 </div>
             </div>
