@@ -11,6 +11,7 @@
 
 {% block body %}
 
+
     {% block header %}
         <div class="container-fluid">
             <div class="row">
@@ -26,30 +27,32 @@
         {% block navbar %}
             <div style="text-align: center" class="navba">
                 <ul style="padding: 0">
-                            <li><a class="btn">ACCUEIL</a></li>
-                            <li><a class="btn">AIDER UN PARTENAIRE</a></li>
-                            <li><a class="btn">BLOG</a></li>
-                            <li>
-                                <a class="btn" data-toggle="modal" data-target="#Modal_recherche">RECHERCHER <span class="glyphicon glyphicon-search"></span></a>
-                                <div class="modal fade" id="Modal_recherche" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h4 class="modal-title" id="myModalLabel">RECHERCHE</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <input type="text"><button style="margin-left: 5px" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
-                                            </div>
-                                        </div>
+                    <li><a class="btn">ACCUEIL</a></li>
+                    <li><a class="btn">AIDER UN PARTENAIRE</a></li>
+                    <li><a class="btn">BLOG</a></li>
+                    <li>
+                        <a class="btn" data-toggle="modal" data-target="#Modal_recherche">RECHERCHER <span class="glyphicon glyphicon-search"></span></a>
+                        <div class="modal fade" id="Modal_recherche" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">RECHERCHE</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="text"><button style="margin-left: 5px" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         {% endblock %}
 {% endblock %}
     {% block content %}
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
     {% endblock %}
 
     {% block footer %}

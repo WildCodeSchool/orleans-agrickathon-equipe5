@@ -227,3 +227,27 @@ body::-webkit-scrollbar {
 hr {
     border-top: 2px solid black;
 }
+
+/* FOSUSER formulaire */
+
+.form-widget{
+    margin-top: 10px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: solid #77CED7;
+    background-color: transparent;
+}
+
+.form-button{
+    margin-top: 10px;
+}
+
+.formulaire{
+
+    background: url("../images/GettyImages-539620417.jpg");
+}
+
+.formulaire h1 {
+    color: #77CED7;
+}

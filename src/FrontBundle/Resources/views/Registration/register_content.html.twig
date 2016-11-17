@@ -1,47 +1,43 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<div class="container well">
+<div class="container-fluid">
     {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-    <div class="groupequipformulaire">
-        <div class="row">
-            <div class="form-group ">
-                {{ form_label(form, "Nom d'utilisateur", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': "Nom d'utilisateur"}}) }}
+        <div class="formulaire">
+            <h1 class="text-center">Inscription Startup</h1>
+            <div class="row ">
+                <div class="col-lg-offset-3 col-lg-6 text-center">
+
+                    <div class="">
+                        {{ form_widget(form.username, {'attr': {'class': 'form-widget', 'placeholder': "Nom d'utilisateur"}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-3 col-lg-6 text-center">
+                    <div class="">
+                        {{ form_widget(form.email, {'attr': {'class': 'form-widget', 'placeholder': "Email"}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-3 col-lg-6 text-center">
+                    <div class="">
+                        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-widget', 'placeholder': "Mot de Passe"}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-3 col-lg-6 text-center">
+                    <div class="">
+                        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-widget', 'placeholder': "Confirmation"}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-offset-3 col-lg-6 text-center">
+                <div class="boutonEdit form-button">
+                    <input type="submit" value="{{ 'registration.submit'|trans }}" />
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form, "Email", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': "Email"}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form, "Mot de passe", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                {{ form_label(form, "Répéter le mot de passe", {'label_attr': {'class': 'col-sm-4 control-label'}}) }}
-                <div class="col-sm-4">
-                    {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-offset-4">
-            <div class="groupequipformulaire boutonEdit ">
-                <input type="submit" value="{{ 'registration.submit'|trans }}" />
-            </div>
-        </div>
-    </div>
+    {{ form_end(form) }}
 </div>
-{{ form_end(form) }}
