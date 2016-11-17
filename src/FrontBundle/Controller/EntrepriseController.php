@@ -47,7 +47,6 @@ class EntrepriseController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($entreprise);
             $em->flush($entreprise);
-            
             return $this->redirectToRoute('entreprise_show', array('id' => $entreprise->getId()));
         }
 
