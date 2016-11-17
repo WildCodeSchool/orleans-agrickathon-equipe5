@@ -1,11 +1,24 @@
 /* Banniere */
 
 .banniere {
-    height: 12vh;
+    height: 15vh;
     text-align: center;
     margin-bottom: 50px;
 }
 
+li {
+    list-style:none;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+.navba {
+    margin-left: 10vw;
+    width: 80vw;
+    height: 38px;
+    border-top: 1px solid #C9C9C9;
+    border-bottom: 1px solid #C9C9C9;
+}
 /* Contenus */
 
 
@@ -45,6 +58,10 @@
     padding: 0;
 }
 
+body {
+    background-image: url("/web/assets/images/Getty.jpg");
+}
+
 .tuiletxt {
     z-index: 1;
     position: absolute;
@@ -65,7 +82,7 @@
 }
 
 .container_content {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-image: url("/web/assets/images/Getty.jpg");
     padding-top: 50px;
     padding-bottom: 50px;
     border-radius: 30px;
