@@ -73,9 +73,9 @@ body {
     text-shadow: 2px 2px 2px black;
 }
 
-.footer{
+/* .footer{
     margin-top: 100px;
-}
+} */
 
 .adpt_margin{
     margin-top: -120px;
@@ -237,17 +237,36 @@ hr {
     border-right: none;
     border-bottom: solid #77CED7;
     background-color: transparent;
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+
 }
 
 .form-button{
     margin-top: 10px;
+    font-size: 30px;
+}
+
+.poop{
+
+    background: url("../images/GettyImages-539620417.jpg") no-repeat ;
+    background-size: cover;
+
+    height:70vh;
 }
 
 .formulaire{
 
-    background: url("../images/GettyImages-539620417.jpg");
+    padding-top: 11%;
 }
-
 .formulaire h1 {
     color: #77CED7;
+    font-size: 50px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.transparent{
+    background-color: RGBA(255, 255, 255, 0.25);
+    background-size: cover;
 }

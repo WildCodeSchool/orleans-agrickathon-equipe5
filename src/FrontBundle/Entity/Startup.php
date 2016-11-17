@@ -52,9 +52,23 @@ class Startup
     /**
      * @var string
      *
+     * @ORM\Column(name="productivite", type="string", length=255)
+     */
+    private $productivite;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="rse", type="string", length=255)
      */
     private $rse;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gain", type="string", length=255)
+     */
+    private $gain;
 
 
     /**
@@ -180,5 +194,53 @@ class Startup
     public function getRse()
     {
         return $this->rse;
+    }
+
+    /**
+     * Set productivite
+     *
+     * @param string $productivite
+     *
+     * @return Startup
+     */
+    public function setProductivite($productivite)
+    {
+        $this->productivite = $productivite;
+
+        return $this;
+    }
+
+    /**
+     * Get productivite
+     *
+     * @return string
+     */
+    public function getProductivite()
+    {
+        return $this->productivite;
+    }
+
+    /**
+     * Set gain
+     *
+     * @param string $gain
+     *
+     * @return Startup
+     */
+    public function setGain($gain)
+    {
+        $this->gain = $gain;
+
+        return $this;
+    }
+
+    /**
+     * Get gain
+     *
+     * @return string
+     */
+    public function getGain()
+    {
+        return $this->gain;
     }
 }

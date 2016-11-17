@@ -1,41 +1,44 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<div class="container-fluid">
+<div class="container-fluid poop">
+
     {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
         <div class="formulaire">
-            <h1 class="text-center">Inscription Startup</h1>
-            <div class="row ">
-                <div class="col-lg-offset-3 col-lg-6 text-center">
+            <div class="transparent">
+                <h1 class="text-center">Inscription Startup</h1>
+                <div class="row ">
+                    <div class="col-lg-offset-3 col-lg-6 text-center">
 
-                    <div class="">
-                        {{ form_widget(form.username, {'attr': {'class': 'form-widget', 'placeholder': "Nom d'utilisateur"}}) }}
+                        <div class="">
+                            {{ form_widget(form.username, {'attr': {'class': 'form-widget', 'placeholder': "Nom d'utilisateur"}}) }}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-offset-3 col-lg-6 text-center">
-                    <div class="">
-                        {{ form_widget(form.email, {'attr': {'class': 'form-widget', 'placeholder': "Email"}}) }}
+                <div class="row">
+                    <div class="col-lg-offset-3 col-lg-6 text-center">
+                        <div class="">
+                            {{ form_widget(form.email, {'attr': {'class': 'form-widget', 'placeholder': "Email"}}) }}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-offset-3 col-lg-6 text-center">
-                    <div class="">
-                        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-widget', 'placeholder': "Mot de Passe"}}) }}
+                <div class="row">
+                    <div class="col-lg-offset-3 col-lg-6 text-center">
+                        <div class="">
+                            {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-widget', 'placeholder': "Mot de Passe"}}) }}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-offset-3 col-lg-6 text-center">
-                    <div class="">
-                        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-widget', 'placeholder': "Confirmation"}}) }}
+                <div class="row">
+                    <div class="col-lg-offset-3 col-lg-6 text-center">
+                        <div class="">
+                            {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-widget', 'placeholder': "Confirmation"}}) }}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-offset-3 col-lg-6 text-center">
-                <div class="boutonEdit form-button">
-                    <input type="submit" value="{{ 'registration.submit'|trans }}" />
+                <div class="col-lg-offset-3 col-lg-6 text-center row">
+                    <div class="form-button btn-flash">
+                        <input type="submit" value="{{ 'registration.submit'|trans }}" />
+                    </div>
                 </div>
             </div>
         </div>
