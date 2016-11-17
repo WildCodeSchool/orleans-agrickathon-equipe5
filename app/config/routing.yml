@@ -1,3 +1,15 @@
+front_tag3:
+    resource: "@FrontBundle/Controller/Tag3Controller.php"
+    type:     annotation
+
+front_tag2:
+    resource: "@FrontBundle/Controller/Tag2Controller.php"
+    type:     annotation
+
+front_tag4:
+    resource: "@FrontBundle/Controller/tag4Controller.php"
+    type:     annotation
+
 front:
     resource: "@FrontBundle/Controller/"
     type:     annotation

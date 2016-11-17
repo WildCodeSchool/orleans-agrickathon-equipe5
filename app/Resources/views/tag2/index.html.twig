@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Tag2s list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tag</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tag2 in tag2s %}
+            <tr>
+                <td><a href="{{ path('tag2_show', { 'id': tag2.id }) }}">{{ tag2.id }}</a></td>
+                <td>{{ tag2.tag }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('tag2_show', { 'id': tag2.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('tag2_edit', { 'id': tag2.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('tag2_new') }}">Create a new tag2</a>
+        </li>
+    </ul>
+{% endblock %}

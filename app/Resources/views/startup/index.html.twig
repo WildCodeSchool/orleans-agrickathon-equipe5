@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Startups list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Contact</th>
+                <th>Technologie</th>
+                <th>Rse</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for startup in startups %}
+            <tr>
+                <td><a href="{{ path('startup_show', { 'id': startup.id }) }}">{{ startup.id }}</a></td>
+                <td>{{ startup.nom }}</td>
+                <td>{{ startup.adresse }}</td>
+                <td>{{ startup.contact }}</td>
+                <td>{{ startup.technologie }}</td>
+                <td>{{ startup.rse }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('startup_show', { 'id': startup.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('startup_edit', { 'id': startup.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('startup_new') }}">Create a new startup</a>
+        </li>
+    </ul>
+{% endblock %}
